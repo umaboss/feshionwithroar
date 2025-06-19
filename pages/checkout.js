@@ -50,17 +50,15 @@ export default function Checkout() {
     // Simulate order processing
     setTimeout(() => {
       clearCart()
-      if (router) router.push('/order-confirmation')
+      router.push('/order-confirmation')
     }, 2000)
   }
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      if (cart.length === 0) {
-        router.push('/cart')
-      }
+    if (cart.length === 0) {
+      router.push('/cart')
     }
-  }, [router, cart.length])
+  }, [cart, router])
 
   if (cart.length === 0) {
     return null
