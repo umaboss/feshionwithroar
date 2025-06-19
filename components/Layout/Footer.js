@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-xl font-bold mb-4">ShopEase</h3>
+            <h3 className="text-xl font-bold mb-4">GenRoar</h3>
             <p className="text-gray-400 mb-4">
               Your one-stop destination for quality products at affordable prices. 
               We bring you the best shopping experience online.
@@ -88,7 +88,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center">
                 <Mail className="h-5 w-5 text-gray-400 mr-3" />
-                <span className="text-gray-400">support@shopease.com</span>
+                <span className="text-gray-400">support@GenRoar.com</span>
               </div>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function Footer() {
 
         <div className="border-t border-gray-800 mt-8 pt-8 text-center">
           <p className="text-gray-400">
-            © 2024 ShopEase. All rights reserved.
+            © 2024 GenRoar. All rights reserved.
           </p>
         </div>
       </div>

@@ -20,7 +20,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">
-              Welcome to ShopEase
+              Welcome to GenRoar
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100">
               Discover amazing products at unbeatable prices
@@ -36,7 +36,7 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Why Choose ShopEase?</h2>
+          <h2 className="text-3xl font-bold text-center mb-12">Why Choose GenRoar?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="bg-primary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
