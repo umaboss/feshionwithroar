@@ -122,15 +122,15 @@ export default function OrderConfirmation() {
 
         {/* Next Steps */}
         <div className="bg-blue-50 rounded-lg p-6 mb-8">
-          <h3 className="font-semibold text-blue-900 mb-4">What's Next?</h3>
+          <h3 className="font-semibold text-blue-900 mb-4">What&apos;s Next?</h3>
           <ul className="space-y-2 text-blue-800">
             <li className="flex items-center">
               <CheckCircle className="h-4 w-4 mr-2" />
-              You'll receive an email confirmation shortly
+              You&apos;ll receive an email confirmation shortly
             </li>
             <li className="flex items-center">
               <CheckCircle className="h-4 w-4 mr-2" />
-              We'll send you tracking information when your order ships
+              We&apos;ll send you tracking information when your order ships
             </li>
             <li className="flex items-center">
               <CheckCircle className="h-4 w-4 mr-2" />

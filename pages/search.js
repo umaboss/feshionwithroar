@@ -102,7 +102,7 @@ export default function SearchPage() {
               <div>
                 <h1 className="text-2xl font-bold">Search Results</h1>
                 <p className="text-gray-600 mt-1">
-                  {filteredResults.length} results for "{q}"
+                  {filteredResults.length} results for &quot;{q}&quot;
                 </p>
               </div>
               
@@ -150,7 +150,7 @@ export default function SearchPage() {
             <Search className="h-16 w-16 text-gray-300 mx-auto mb-4" />
             <h2 className="text-xl font-semibold text-gray-600 mb-2">No results found</h2>
             <p className="text-gray-500 mb-6">
-              We couldn't find any products matching "{q}"
+              We couldn&apos;t find any products matching &quot;{q}&quot;
             </p>
             <div className="space-y-2 text-sm text-gray-500">
               <p>Try:</p>
