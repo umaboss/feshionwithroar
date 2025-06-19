@@ -6,8 +6,8 @@ import { products } from '@/data/products'
 import { Search, Filter } from 'lucide-react'
 
 export default function SearchPage() {
-  const router = useRouter()
-  const { q } = router.query
+  const router = typeof window !== 'undefined' ? useRouter() : null
+  const { q } = router?.query || {}
   
   const [searchResults, setSearchResults] = useState([])
   const [filteredResults, setFilteredResults] = useState([])
@@ -67,7 +67,7 @@ export default function SearchPage() {
   const handleSearch = (e) => {
     e.preventDefault()
     if (searchQuery.trim()) {
-      router.push(`/search?q=${encodeURIComponent(searchQuery)}`)
+      router?.push(`/search?q=${encodeURIComponent(searchQuery)}`)
     }
   }
 
@@ -180,7 +180,7 @@ export default function SearchPage() {
                   key={term}
                   onClick={() => {
                     setSearchQuery(term)
-                    router.push(`/search?q=${term}`)
+                    router?.push(`/search?q=${term}`)
                   }}
                   className="bg-gray-100 hover:bg-gray-200 text-gray-700 px-4 py-2 rounded-full transition-colors capitalize"
                 >

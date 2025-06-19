@@ -8,7 +8,7 @@ import { CreditCard, MapPin, User, Lock } from 'lucide-react'
 export default function Checkout() {
   const { cart, getCartTotal, clearCart } = useCart()
   const { user } = useAuth()
-  const router = useRouter()
+  const router = typeof window !== 'undefined' ? useRouter() : null
   
   const [formData, setFormData] = useState({
     // Shipping Information
@@ -50,12 +50,12 @@ export default function Checkout() {
     // Simulate order processing
     setTimeout(() => {
       clearCart()
-      router.push('/order-confirmation')
+      if (router) router.push('/order-confirmation')
     }, 2000)
   }
 
   if (cart.length === 0) {
-    router.push('/cart')
+    if (router) router.push('/cart')
     return null
   }
 
