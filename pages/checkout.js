@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Layout from '@/components/Layout/Layout'
 import { useCart } from '@/context/CartContext'
@@ -6,9 +6,9 @@ import { useAuth } from '@/context/AuthContext'
 import { CreditCard, MapPin, User, Lock } from 'lucide-react'
 
 export default function Checkout() {
+  const router = useRouter()
   const { cart, getCartTotal, clearCart } = useCart()
   const { user } = useAuth()
-  const router = typeof window !== 'undefined' ? useRouter() : null
   
   const [formData, setFormData] = useState({
     // Shipping Information
@@ -54,8 +54,15 @@ export default function Checkout() {
     }, 2000)
   }
 
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (cart.length === 0) {
+        router.push('/cart')
+      }
+    }
+  }, [router, cart.length])
+
   if (cart.length === 0) {
-    if (router) router.push('/cart')
     return null
   }
 

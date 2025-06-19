@@ -6,7 +6,7 @@ import { products } from '@/data/products'
 import { Search, Filter } from 'lucide-react'
 
 export default function SearchPage() {
-  const router = typeof window !== 'undefined' ? useRouter() : null
+  const router = useRouter()
   const { q } = router?.query || {}
   
   const [searchResults, setSearchResults] = useState([])
@@ -67,7 +67,9 @@ export default function SearchPage() {
   const handleSearch = (e) => {
     e.preventDefault()
     if (searchQuery.trim()) {
-      router?.push(`/search?q=${encodeURIComponent(searchQuery)}`)
+      if (typeof window !== 'undefined') {
+        router.push(`/search?q=${encodeURIComponent(searchQuery)}`)
+      }
     }
   }
 
